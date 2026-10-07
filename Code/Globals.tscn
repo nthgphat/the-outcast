@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cddd40xinbsk5"]
+
+[ext_resource type="Script" uid="uid://c77gcqitgw3bv" path="res://Code/Globals.gd" id="1_gid1k"]
+[ext_resource type="AudioStream" uid="uid://c0u0a5y58pfaw" path="res://Music/Thatched Villagers.mp3" id="2_g2uch"]
+[ext_resource type="PackedScene" uid="uid://bfdp7qwbun77v" path="res://Code/Player.tscn" id="3_b3iqo"]
+
+[node name="Globals" type="Node" unique_id=826509405]
+script = ExtResource("1_gid1k")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1725543008]
+stream = ExtResource("2_g2uch")
+autoplay = true
+parameters/looping = true
+
+[node name="SoundPlayer" type="AudioStreamPlayer" parent="." unique_id=738553216]
+
+[node name="Player" parent="." unique_id=1594877187 instance=ExtResource("3_b3iqo")]

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bfdp7qwbun77v"]
+
+[ext_resource type="PackedScene" uid="uid://bt1c114espl1o" path="res://Code/Character.tscn" id="1_g8en4"]
+[ext_resource type="Script" uid="uid://tidcxhlk3k3r" path="res://Code/Player.gd" id="2_5xwh2"]
+[ext_resource type="Texture2D" uid="uid://bwhvjgjc1p60g" path="res://Sprites/Player_Outcast.png" id="2_nk31c"]
+
+[node name="Player" unique_id=1594877187 instance=ExtResource("1_g8en4")]
+texture = ExtResource("2_nk31c")
+centered = false
+script = ExtResource("2_5xwh2")

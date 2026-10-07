@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c16lfvg6vk1y4"]
+
+[ext_resource type="PackedScene" uid="uid://dqwfaj75pyu1m" path="res://Code/Enemy.tscn" id="1_ngs40"]
+[ext_resource type="Script" uid="uid://dh30r1g7h2ixq" path="res://Code/Enemy_EvilRedCrystal.gd" id="2_vkdpr"]
+
+[node name="Enemy_EvilRedCrystal" unique_id=1594877187 instance=ExtResource("1_ngs40")]
+centered = false
+script = ExtResource("2_vkdpr")

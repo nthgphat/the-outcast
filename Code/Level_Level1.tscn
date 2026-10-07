@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://nmx4i4387icf"]
+
+[ext_resource type="PackedScene" uid="uid://8adbjgmkdfa1" path="res://Code/Level.tscn" id="1_2yljf"]
+[ext_resource type="Texture2D" uid="uid://dvqk4k38clb7x" path="res://Sprites/battle_bg.png" id="2_0egvq"]
+[ext_resource type="Script" uid="uid://8obkxrbqirfe" path="res://Code/Level_Level1.gd" id="2_iltsv"]
+
+[node name="Level_Level1" unique_id=1165270162 instance=ExtResource("1_2yljf")]
+texture = ExtResource("2_0egvq")
+script = ExtResource("2_iltsv")

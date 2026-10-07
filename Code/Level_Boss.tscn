@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bvl7paytc57hm"]
+
+[ext_resource type="PackedScene" uid="uid://8adbjgmkdfa1" path="res://Code/Level.tscn" id="1_pdtaa"]
+[ext_resource type="Texture2D" uid="uid://dygyawos0pxlt" path="res://Sprites/Background_Level_Boss.png" id="2_8urkn"]
+[ext_resource type="Script" uid="uid://cpqqmxdfxw64j" path="res://Code/Level_Boss.gd" id="2_j3ygs"]
+
+[node name="Level_Boss" unique_id=1165270162 instance=ExtResource("1_pdtaa")]
+texture = ExtResource("2_8urkn")
+script = ExtResource("2_j3ygs")

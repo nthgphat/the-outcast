@@ -1,0 +1,347 @@
+[gd_scene format=3 uid="uid://d0tgcnmggdqmo"]
+
+[ext_resource type="Script" uid="uid://bikethhaj40uh" path="res://Code/WorldMapScreen.gd" id="1_i1rbp"]
+[ext_resource type="Texture2D" uid="uid://bf8lh26206j7c" path="res://Sprites/worldmap.png" id="1_lpfk7"]
+[ext_resource type="Texture2D" uid="uid://c204sb1mcdnm4" path="res://Sprites/settings.png" id="2_lpfk7"]
+[ext_resource type="Script" uid="uid://c2l4d22flr07q" path="res://Code/settings_panel.gd" id="4_i1rbp"]
+[ext_resource type="Script" uid="uid://b8tbs8x75ls1n" path="res://Code/settings_button.gd" id="4_tv2sl"]
+[ext_resource type="Script" uid="uid://o363xb4kji06" path="res://Code/PanelOverlay.gd" id="5_nkrcw"]
+[ext_resource type="Script" uid="uid://d2wppoyblhxuu" path="res://Code/inventory_button.gd" id="8_nkrcw"]
+[ext_resource type="Script" uid="uid://b8rhci83vri1r" path="res://Code/levels_panel.gd" id="9_tv2sl"]
+[ext_resource type="Texture2D" uid="uid://bddlmsmerlrdi" path="res://Sprites/inventory.png" id="9_ynrdm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i1rbp"]
+bg_color = Color(0, 0, 0, 0.6901961)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qwqkx"]
+bg_color = Color(0, 0, 0, 0.7490196)
+
+[node name="WorldMapScreen" type="TextureRect" unique_id=999469032]
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_lpfk7")
+expand_mode = 1
+script = ExtResource("1_i1rbp")
+
+[node name="settings_button" type="TextureButton" parent="." unique_id=151044565]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -80.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("2_lpfk7")
+stretch_mode = 0
+script = ExtResource("4_tv2sl")
+
+[node name="G_PanelOverlay" type="CanvasLayer" parent="settings_button" unique_id=1014931515]
+visible = false
+script = ExtResource("5_nkrcw")
+
+[node name="settings_panel" type="Panel" parent="settings_button/G_PanelOverlay" unique_id=814503218]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = -250.0
+offset_right = 375.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_i1rbp")
+
+[node name="settings_label" type="Label" parent="settings_button/G_PanelOverlay/settings_panel" unique_id=209526557]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_right = 80.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 24
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="music_label" type="Label" parent="settings_button/G_PanelOverlay/settings_panel" unique_id=1973877933]
+layout_mode = 1
+offset_left = -1.0
+offset_top = 66.0
+offset_right = 159.0
+offset_bottom = 106.0
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 24
+text = "Music"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="sound_label" type="Label" parent="settings_button/G_PanelOverlay/settings_panel" unique_id=939543593]
+layout_mode = 1
+offset_left = -1.0
+offset_top = 130.0
+offset_right = 159.0
+offset_bottom = 170.0
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 24
+text = "Sound"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="music_slider" type="HSlider" parent="settings_button/G_PanelOverlay/settings_panel" unique_id=1490941012]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 74.0
+offset_right = 695.0
+offset_bottom = 98.0
+max_value = 1.0
+step = 0.0
+value = 1.0
+
+[node name="sound_slider" type="HSlider" parent="settings_button/G_PanelOverlay/settings_panel" unique_id=2023875557]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 138.0
+offset_right = 695.0
+offset_bottom = 162.0
+max_value = 1.0
+step = 0.0
+value = 1.0
+
+[node name="quit_to_title_screen_button" type="Button" parent="settings_button/G_PanelOverlay/settings_panel" unique_id=2072310760]
+layout_mode = 0
+offset_left = 263.0
+offset_top = 418.0
+offset_right = 511.0
+offset_bottom = 470.0
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 24
+text = "Quit to title screen"
+
+[node name="title" type="Label" parent="." unique_id=2110743511]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -48.0
+offset_right = 52.0
+offset_bottom = 88.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 32
+text = "Map"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="inventory_button" type="TextureButton" parent="." unique_id=1632405768]
+layout_mode = 0
+offset_left = 1104.0
+offset_top = 640.0
+offset_right = 1168.0
+offset_bottom = 704.0
+texture_normal = ExtResource("9_ynrdm")
+stretch_mode = 0
+script = ExtResource("8_nkrcw")
+
+[node name="G_PanelOverlay" type="CanvasLayer" parent="inventory_button" unique_id=1363954271]
+visible = false
+script = ExtResource("5_nkrcw")
+
+[node name="inventory_panel" type="Panel" parent="inventory_button/G_PanelOverlay" unique_id=226016846]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -300.0
+offset_right = 400.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="inventory_list" type="ItemList" parent="inventory_button/G_PanelOverlay/inventory_panel" unique_id=1264760760]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 232.0
+offset_right = 764.0
+offset_bottom = 496.0
+item_count = 2
+item_0/text = "Sword"
+item_1/text = "Armor"
+
+[node name="Label" type="Label" parent="inventory_button/G_PanelOverlay/inventory_panel" unique_id=562491409]
+layout_mode = 0
+offset_left = 244.0
+offset_top = 16.0
+offset_right = 556.0
+offset_bottom = 39.0
+text = "Inventory"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HP_value_text" type="Label" parent="inventory_button/G_PanelOverlay/inventory_panel" unique_id=495581875]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 48.0
+offset_right = 124.0
+offset_bottom = 71.0
+vertical_alignment = 1
+
+[node name="HP_label" type="Label" parent="inventory_button/G_PanelOverlay/inventory_panel" unique_id=372948596]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 48.0
+offset_right = 68.0
+offset_bottom = 71.0
+text = "HP:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ATK_label" type="Label" parent="inventory_button/G_PanelOverlay/inventory_panel" unique_id=91118246]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 96.0
+offset_right = 68.0
+offset_bottom = 119.0
+text = "ATK:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ATK_value_text" type="Label" parent="inventory_button/G_PanelOverlay/inventory_panel" unique_id=1068814154]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 96.0
+offset_right = 200.0
+offset_bottom = 119.0
+vertical_alignment = 1
+
+[node name="LVL_label" type="Label" parent="inventory_button/G_PanelOverlay/inventory_panel" unique_id=1921903020]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 145.0
+offset_right = 67.0
+offset_bottom = 168.0
+text = "Level"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LVL_value_text" type="Label" parent="inventory_button/G_PanelOverlay/inventory_panel" unique_id=774696399]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 145.0
+offset_right = 204.0
+offset_bottom = 168.0
+vertical_alignment = 1
+
+[node name="lvl_up_button" type="Button" parent="inventory_button/G_PanelOverlay/inventory_panel" unique_id=428447771]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -104.0
+offset_top = -88.0
+offset_right = 96.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Level up (XP cost: 1000)"
+
+[node name="inventory_label" type="Label" parent="inventory_button/G_PanelOverlay/inventory_panel" unique_id=294909950]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 192.0
+offset_right = 364.0
+offset_bottom = 215.0
+text = "Equipments (double-click an item to equip)"
+
+[node name="xp_icon" type="Label" parent="." unique_id=1673292791]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 80.0
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(0, 0.5575447, 0.9475227, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 32
+text = "XP:"
+
+[node name="xp_amount" type="Label" parent="." unique_id=1192511697]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 24.0
+offset_right = 392.0
+offset_bottom = 72.0
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 32
+
+[node name="levels_panel" type="Panel" parent="." unique_id=1454765724]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 104.0
+offset_right = 1232.0
+offset_bottom = 608.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_i1rbp")
+script = ExtResource("9_tv2sl")
+
+[node name="levels_list" type="ItemList" parent="levels_panel" unique_id=1691031699]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -72.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qwqkx")
+
+[node name="to_battle_button" type="Button" parent="levels_panel" unique_id=1944127571]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = -64.0
+offset_right = 112.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 24
+text = "Play"
+
+[node name="levels_list" type="ItemList" parent="." unique_id=1548107876]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 104.0
+offset_right = 264.0
+offset_bottom = 608.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qwqkx")
+item_count = 1
+item_0/text = "Area 1: Beginning"
+
+[connection signal="draw" from="." to="." method="_on_draw"]
+[connection signal="pressed" from="settings_button" to="settings_button" method="_on_pressed"]
+[connection signal="draw" from="settings_button/G_PanelOverlay/settings_panel/music_slider" to="settings_button/G_PanelOverlay/settings_panel" method="_on_music_slider_draw"]
+[connection signal="value_changed" from="settings_button/G_PanelOverlay/settings_panel/music_slider" to="settings_button/G_PanelOverlay/settings_panel" method="_on_music_slider_value_changed"]
+[connection signal="draw" from="settings_button/G_PanelOverlay/settings_panel/sound_slider" to="settings_button/G_PanelOverlay/settings_panel" method="_on_sound_slider_draw"]
+[connection signal="value_changed" from="settings_button/G_PanelOverlay/settings_panel/sound_slider" to="settings_button/G_PanelOverlay/settings_panel" method="_on_sound_slider_value_changed"]
+[connection signal="pressed" from="settings_button/G_PanelOverlay/settings_panel/quit_to_title_screen_button" to="settings_button" method="_on_quit_to_title_screen_button_pressed"]
+[connection signal="pressed" from="inventory_button" to="inventory_button" method="_on_pressed"]
+[connection signal="draw" from="inventory_button/G_PanelOverlay/inventory_panel" to="inventory_button" method="_on_inventory_panel_draw"]
+[connection signal="item_activated" from="inventory_button/G_PanelOverlay/inventory_panel/inventory_list" to="inventory_button" method="_on_inventory_panel_inventory_list_item_activated"]
+[connection signal="pressed" from="inventory_button/G_PanelOverlay/inventory_panel/lvl_up_button" to="inventory_button" method="_on_inventory_panel_lvl_up_button_pressed"]
+[connection signal="pressed" from="levels_panel/to_battle_button" to="levels_panel" method="_on_to_battle_button_pressed"]

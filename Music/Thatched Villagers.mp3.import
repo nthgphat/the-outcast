@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c0u0a5y58pfaw"
+path="res://.godot/imported/Thatched Villagers.mp3-d50fdef553af476d234091beb65b5534.mp3str"
+
+[deps]
+
+source_file="res://Music/Thatched Villagers.mp3"
+dest_files=["res://.godot/imported/Thatched Villagers.mp3-d50fdef553af476d234091beb65b5534.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

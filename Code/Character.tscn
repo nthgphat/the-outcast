@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bt1c114espl1o"]
+
+[ext_resource type="Script" uid="uid://bys11na0orcti" path="res://Code/Character.gd" id="1_algit"]
+
+[node name="Character" type="Sprite2D" unique_id=555381267]
+script = ExtResource("1_algit")

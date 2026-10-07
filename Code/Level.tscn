@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://8adbjgmkdfa1"]
+
+[ext_resource type="Script" uid="uid://cyuoyga13eo6b" path="res://Code/Level.gd" id="1_fuwj0"]
+
+[node name="Level" type="TextureRect" unique_id=1165270162]
+script = ExtResource("1_fuwj0")

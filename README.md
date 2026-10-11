@@ -15,10 +15,8 @@ The Outcast, a 2-dimensional turn-based RPG.
 ## Usage
 Download Godot & load this project.
 
-## License
-[MIT](LICENSE)
-
 ## Notes
 This was my final year project and it was made when I had almost no Godot knowledge. It is currently short of a few features I want; I plan to polish the game and add more features.
+This was made in Godot: https://godotengine.org/license/
 
 
